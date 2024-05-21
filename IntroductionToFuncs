@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int transformation(int f); //Declaring the function with int because it returns an int
+
+int main()
+{
+	int fahr;
+	int step = 20;
+	for (fahr = 0; fahr <= 300; fahr += step) {
+		printf("%d Fahr -> Celsius: %d\n", fahr, transformation(fahr));
+	}
+	return 0;
+}
+
+int transformation(int f)
+{
+	int c ;
+	c = (5 * (f - 32)) / 9;
+	return c;
+}
+
+
